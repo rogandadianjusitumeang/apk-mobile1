@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Registrasi barang</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card class="welcome-card bg-content">
+    <ion-card-header>
+      <ion-card-title color="primary">Registrasi barang</ion-card-title>
+    </ion-card-header>
+  <ion-card-content>
+<p>Silakan isikan form dibawah untuk pendataan barang!.</p>
+
+
+<ion-list>
+  <ion-item>
+    <ion-label position="floating"> kode barang</ion-label>
+      <ion-input type="text" [(ngModel)]="kode"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating"> nama barang </ion-label>
+      <ion-input type="email" [(ngModel)]="nama "></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating"> harga barang</ion-label>
+      <ion-input type="email" [(ngModel)]="harga"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label position="floating"> stok barang </ion-label>
+      <ion-input type="email" [(ngModel)]="stok"></ion-input>
+  </ion-item>
+
+</ion-list>
+<div padding>
+<ion-button expand="block" color="tertiary" size="medium"
+(click)="addRegister()"><ion-icon name="trending-up-outline"></ion-icon>
+masuk</ion-button>
+</div>
+</ion-card-content>
+</ion-card>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Data Stok barang</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+   <ion-refresher-content
+     pullingIcon="arrow-dropdown"
+     pullingText="Pull to refresh"
+     refreshingSpinner="circles"
+     refreshingText="Refreshing...">
+   </ion-refresher-content>
+ </ion-refresher>
+
+<ion-card *ngFor="let barang of barang">
+  <ion-card-header>
+    <ion-card-subtitle>kode: {{barang.kode}}, harga: {{barang.harga}}</ion-card-subtitle>
+    <ion-card-title>{{barang.nama}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    stok: {{barang.stok}},
+  </ion-card-content>
+</ion-card>
+
+
+
+<ion-infinite-scroll  (ionInfinite)="loadData($event)">
+  <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more data...">
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+</ion-content>
